@@ -1,0 +1,19 @@
+APPLICATION : 
+
+1. - RUN DB IN FILE resources/database.sql
+2. - And run application -> mvn clean spring-boot:run {{PORT RUNNING http://localhost:8282}}
+
+API : 
+CONTACT : 
+- http://localhost:8282/alami/api/v1/contact {POST}
+- http://localhost:8282/alami/api/v1/contact {GET}
+
+LOAN APPLICATION : 
+- http://localhost:8282/alami/api/v1/loan {POST}
+- http://localhost:8282/alami/api/v1/loan/filter-by-date {POST}
+- http://localhost:8282/alami/api/v1/loan/filter-by-contact/{{contact_id}} {GET}
+
+SAVING APPLICATION : 
+- http://localhost:8282/alami/api/v1/saving {POST}
+- http://localhost:8282/alami/api/v1/saving/filter-by-date {POST}
+- http://localhost:8282/alami/api/v1/saving/filter-by-contact/{{contact_id}} {GET}
