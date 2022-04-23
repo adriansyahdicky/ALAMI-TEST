@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: alami
+  datasource:
+    url: jdbc:postgresql://localhost:5432/alami-test
+    username: postgres
+    password: root
+
+server:
+  port: 8282
+  servlet:
+    context-path: /alami
