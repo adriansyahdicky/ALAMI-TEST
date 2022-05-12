@@ -25,7 +25,9 @@ public class ContactSaveService {
                             .birthDate(requestSaveContactDto.getBirthDate())
                             .birthPlace(requestSaveContactDto.getBirthPlace())
                             .address(requestSaveContactDto.getAddress())
-                            .enabled(requestSaveContactDto.getEnabled()).build();
+                            .enabled(requestSaveContactDto.getEnabled())
+                            .hoby(requestSaveContactDto.getHoby())
+                            .gaji(requestSaveContactDto.getGaji()).build();
             contactRepository.save(contact);
             return Response.result(requestSaveContactDto);
         }catch (Exception ex){

@@ -31,4 +31,10 @@ public class ContactController {
     public ResponseEntity<Object> getContacts(){
         return ResponseEntity.ok(contactFilterService.findAll());
     }
+
+    @GetMapping(value = "/by-name/{name}")
+    public ResponseEntity<Object> getContactsByName(@PathVariable("name") String name){
+        return ResponseEntity.
+                ok(contactFilterService.findByName(name));
+    }
 }

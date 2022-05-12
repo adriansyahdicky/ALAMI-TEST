@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -30,4 +31,8 @@ public class Contact extends BaseEntity{
     private String address;
 
     private Boolean enabled;
+
+    private String hoby;
+
+    private BigDecimal gaji;
 }

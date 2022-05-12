@@ -34,4 +34,12 @@ public class ApplicationExceptionHandler {
                 .result(ex.getMessage()).build();
         return new ResponseEntity<>(errors, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(BusinessException.class)
+    public ResponseEntity<Object> customBusiness(Exception ex) {
+        Response<Object>
+                errors = Response.builder().localDateTime(LocalDateTime.now())
+                .result(ex.getMessage()).build();
+        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+    }
 }

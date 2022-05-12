@@ -38,4 +38,15 @@ public class ContactFilterService {
             throw ex;
         }
     }
+
+    public Response<Map<String, Object>> findByName(String parameter){
+        try {
+            Map<String, Object> mapResult = new HashMap<>();
+            mapResult.put("data", contactRepository.findByName(parameter));
+            return Response.result(mapResult);
+        }catch (Exception ex){
+            log.error("Error find all contact {} ", ex.getMessage());
+            throw ex;
+        }
+    }
 }

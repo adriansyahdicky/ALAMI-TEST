@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -26,5 +27,6 @@ public class RequestSaveContactDto {
     @NotBlank(message = "Address Cannot Required")
     private String address;
     private Boolean enabled;
-
+    private String hoby;
+    private BigDecimal gaji;
 }
